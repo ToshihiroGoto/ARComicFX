@@ -6,7 +6,11 @@ Reproduce Spider Varse-like color shift (Fringe/Off-registration) with ARKit.
 
   
 
-#### Set parameters (scene = SCNScene)
+#### Set parameters (sceneView = SCNView)
 
-- scene.pointOfView?.camera?.colorFringeStrength
-- scene.pointOfView?.camera?.colorFringeIntensity 
+```
+let mainCamera = sceneView.pointOfView?.camera
+
+mainCamera?.colorFringeStrength = 5
+mainCamera?.colorFringeIntensity = 0.5
+```
